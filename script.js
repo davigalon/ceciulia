@@ -27,7 +27,7 @@ const Seconds = document.getElementById('seconds');
 const targetDate = new Date("January 11 2025 00:00:00").getTime();
 
 function timer () {
-    const currentDate = new Date().getTime();
+    const currentDate = new Date(new Date().toLocaleString("en-US", {timeZone: "America/Sao_Paulo"})).getTime();
     const diff = currentDate - targetDate;
 
     const years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365));
